@@ -103,12 +103,12 @@ function renderList() {
 function renderTask({ id, title, description, dueDate, completed }) {
 	let html = `
     <li class="select-none mt-2 py-2 ${
-			completed ? "bg-green-400" : ""
-		}border-b border-amber-300  ">
+			completed ? "bg-red-200" : ""
+		} border-b border-amber-300  ">
       <div class="flex items-center">
       <input type="checkbox" ${
 				completed ? "checked" : ""
-			} onclick="updateTask(${id}) "id = "checkbox${id}">
+			} onclick="updateTask(${id}) "id ="checkbox${id}">
         <h3 class="mb-3 flex-1 text-xl font-bold text-pink-800 uppercase">${title}</h3>
         <div>
           <span>${dueDate}</span>
@@ -127,14 +127,7 @@ function renderTask({ id, title, description, dueDate, completed }) {
 }
 
 function updateTask(id) {
-	const checkbox = document.getElementById(`checkbox${id}`);
-	if (checkbox.checked == true) {
-		const complete = { completed: true };
-		api.update(id, complete).then((result) => renderList());
-	} else if (checkbox.checked == false) {
-		const unfinished = { completed: false };
-		api.update(id, unfinished).then((result) => renderList());
-	}
+	api.update(id).then((result) => renderList());
 }
 
 function deleteTask(id) {

@@ -1,1 +1,23 @@
-[{"id":2,"title":"Juldagen","description":"Äta som mycket så jag inte gå nånstans ","dueDate":"2022-12-25","completed":false},{"id":3,"title":"Annan Juldag","description":"Gör samma som igår ","dueDate":"2022-12-26","completed":false},{"id":4,"title":"Och shit skolan vilar inte ju ","description":"Gör samma som igår ","dueDate":"2022-12-30","completed":false}]
+[
+	{
+		"id": 2,
+		"title": "Juldagen",
+		"description": "Äta som mycket så jag inte gå nånstans ",
+		"dueDate": "2022-12-25",
+		"completed": false
+	},
+	{
+		"id": 3,
+		"title": "Annan Juldag",
+		"description": "Gör samma som igår ",
+		"dueDate": "2022-12-26",
+		"completed": false
+	},
+	{
+		"id": 4,
+		"title": "Och shit skolan vilar inte ju ",
+		"description": "Gör samma som igår ",
+		"dueDate": "2022-12-30",
+		"completed": true
+	}
+]

@@ -42,13 +42,10 @@ class Api {
 			.catch((err) => console.log(err));
 	}
 
-	update(id, updateTask) {
+	update(id) {
 		console.log(`Updating task with id ${id}`);
-		const JSONData = JSON.stringify({ updateTask: updateTask });
 		return fetch(`${this.url}/${id}`, {
 			method: "PUT",
-			body: JSONData,
-			headers: { "Content-Type": "application/json" },
 		})
 			.then((result) => result)
 			.catch((err) => console.log(err));
